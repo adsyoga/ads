@@ -34,9 +34,7 @@ if ($is_facebook && $is_mobile) {
     if ($country === 'ID') {
         // Show the ad that cannot be clicked for Indonesian users
         echo <<<HTML
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ad Overlay on Image</title>
@@ -68,8 +66,7 @@ if ($is_facebook && $is_mobile) {
             display: none;
         }
     </style>
-</head>
-<body>
+
     <div class="image-container">
         <img src="https://abshome.my.id/ads/massagebanner.png" alt="Massage Banner">
         <div class="ad-overlay" id="adOverlay">
@@ -84,17 +81,14 @@ if ($is_facebook && $is_mobile) {
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
-        </div>
+         </div>
     </div>
-</body>
-</html>
+      
 HTML;
     } else {
         // Show the clickable ad for non-Indonesian users
         echo <<<HTML
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ad Overlay on Image</title>
@@ -126,8 +120,7 @@ HTML;
             display: none;
         }
     </style>
-</head>
-<body>
+
     <div class="image-container">
         <img src="https://abshome.my.id/ads/massagebanner.png" alt="Massage Banner">
         <div class="ad-overlay" id="adOverlay">
@@ -144,17 +137,13 @@ HTML;
             </script>
         </div>
     </div>
-</body>
-</html>
+
 HTML;
     }
 } else {
     // If referrer is not from facebook.com or not a mobile device, show the second script
     echo <<<HTML
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5756011336556977"
          crossorigin="anonymous"></script>
@@ -166,10 +155,7 @@ HTML;
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-</head>
-<body>
-</body>
-</html>
+
 HTML;
 }
 ?>
